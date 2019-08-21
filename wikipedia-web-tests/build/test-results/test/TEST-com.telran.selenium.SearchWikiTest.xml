@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.telran.selenium.SearchWikiTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-08-21T18:03:34" hostname="DESKTOP" time="14.217">
+  <properties/>
+  <testcase name="setUp" classname="com.telran.selenium.SearchWikiTest" time="14.217"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 76.0.3809.68 (420c9498db8ce8fcd190a954d51297672c1515d5-refs/branch-heads/3809@{#864}) on port 41917
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+Aug 21, 2019 9:03:37 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>
