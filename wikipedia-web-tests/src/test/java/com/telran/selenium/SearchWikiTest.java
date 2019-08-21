@@ -13,6 +13,8 @@ public void setUp () throws InterruptedException {
 
     driver = new ChromeDriver();
     driver.get("https://en.wikipedia.org");
+    driver.findElement(By.id("searchInput")).click();
+    driver.findElement(By.id("searchInput")).clear();
     driver.findElement(By.id("searchInput")).sendKeys("TRAFFORD PARK");
     driver.findElement(By.id("searchButton")).click();
     Thread.sleep(7000);
