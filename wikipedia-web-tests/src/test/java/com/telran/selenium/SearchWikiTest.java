@@ -13,7 +13,7 @@ public class SearchWikiTest extends TestBase{
         }
     }
     @Test
-    public void searchkTest ()  {
+    public void searchTest ()  {
         app.search("TRAFFORD PARK");
         boolean isPresent = app.isSearchedElementPresent();
         Assert.assertEquals(isPresent, true);
