@@ -14,8 +14,9 @@ public class SearchWikiTest extends TestBase{
     }
     @Test
     public void searchTest ()  {
-        app.search("TRAFFORD PARK");
-        boolean isPresent = app.isSearchedElementPresent();
+        String title = "Trafford Park";
+        app.search(title);
+        boolean isPresent = app.isSearchedElementPresent(title);
         Assert.assertEquals(isPresent, true);
     }
 
