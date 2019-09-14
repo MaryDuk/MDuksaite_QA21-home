@@ -70,8 +70,8 @@ public class ApplicationManager {
         return isElementPresent(By.xpath("//a[contains(text(),'Log out')]"));
     }
 
-    public boolean isSearchedElementPresent (){
-        return isElementPresent(By.xpath("//b[contains(text(),'Trafford Park')]"));
+    public boolean isSearchedElementPresent (String text){
+        return isElementPresent(By.xpath("//b[contains(text(),'" + text + "')]"));
     }
 
     protected String getSearchText() {
