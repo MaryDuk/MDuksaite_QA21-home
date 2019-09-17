@@ -9,22 +9,22 @@ public class LoginToWiki extends TestBase{
 
    @BeforeClass
    public void isOnHomePage () {
-       if (!app.isWikiHomePageOpened()){
-           app.openSite("https://en.wikipedia.org");
+       if (!app.getSessionHelper().isWikiHomePageOpened()){
+           app.getSessionHelper().openSite("https://en.wikipedia.org");
        }
    }
 
    @BeforeMethod
    public void isUserLoggedOff() {
-       if (!app.isLoginPresent()){
-           app.logOUt();
+       if (!app.getSessionHelper().isLoginPresent()){
+           app.getSessionHelper().logOUt();
        }
    }
 
     @Test
     public void logInWiki () {
-        app.login("MaryDuk", "trusty07");
-        boolean isPresent = app.isLogoutPresent();
+        app.getSessionHelper().login("MaryDuk", "trusty07");
+        boolean isPresent = app.getSessionHelper().isLogoutPresent();
         Assert.assertEquals(isPresent, true);
     }
 }
