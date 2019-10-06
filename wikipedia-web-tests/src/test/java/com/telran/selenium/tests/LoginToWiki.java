@@ -26,5 +26,6 @@ public class LoginToWiki extends TestBase{
         app.getSessionHelper().login("MaryDuk", "trusty07");
         boolean isPresent = app.getSessionHelper().isLogoutPresent();
         Assert.assertEquals(isPresent, true);
+
     }
 }
