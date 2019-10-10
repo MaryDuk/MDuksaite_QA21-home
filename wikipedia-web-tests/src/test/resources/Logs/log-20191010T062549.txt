@@ -1,0 +1,4 @@
+06:25:55.110 [Test worker] INFO  com.telran.selenium.tests.TestBase - start testlogInWikiwith parameters []
+06:26:02.669 [Test worker] INFO  com.telran.selenium.tests.TestBase - stop testlogInWiki
+06:26:02.698 [Test worker] INFO  com.telran.selenium.tests.TestBase - start testsearchTestwith parameters []
+06:26:09.906 [Test worker] INFO  com.telran.selenium.tests.TestBase - stop testsearchTest
