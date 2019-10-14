@@ -1,5 +1,6 @@
 package com.telran.selenium.manager;
 
+import com.telran.selenium.model.SearchData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -18,12 +19,17 @@ public class SearchHelper extends HelperBase{
         driver.findElement(By.id("searchInput")).sendKeys(text + Keys.ENTER);
     }
 
+    public void searchData(SearchData text) throws InterruptedException {
+      type(By.id("searchInput"), text.getSearchTitle());
+      click(By.xpath("//input[@id='searchButton']"));
+    }
+
     public boolean isSearchedElementPresent (String text){
         return isElementPresent(By.xpath("//b[contains(text(),'" + text + "')]"));
     }
 
-    protected String getSearchText() {
-        new WebDriverWait(driver, 20).until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("h1")));
-        return driver.findElement(By.cssSelector("h1")).getText();
+    public String getSearchText() {
+        new WebDriverWait(driver, 20).until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#firstHeading")));
+        return driver.findElement(By.cssSelector("#firstHeading")).getText().toLowerCase();
     }
 }
