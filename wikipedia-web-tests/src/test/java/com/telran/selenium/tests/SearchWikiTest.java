@@ -60,14 +60,15 @@ public class SearchWikiTest extends TestBase{
         SearchData text = new SearchData().setSearchTitle(searchTitle);
         app.getSearchHelper().searchData(text);
         String title = searchTitle.toLowerCase();
-        String searchedText = app.getSearchHelper().getSearchText();
+        String searchedText = app.getSearchHelper().getTextOnWeb();
         Assert.assertEquals(searchedText, title);
     }
     @Test (dataProvider = "searchTitlecsv")
     public void searchTestDPcsv (SearchData text ) throws InterruptedException {
         app.getSearchHelper().searchData(text);;
-        String searchedText = app.getSearchHelper().getSearchText();
-        Assert.assertEquals(searchedText, text.getSearchTitle().toLowerCase());
+        String textFound = app.getSearchHelper().getTextOnWeb();
+        String textTransfered = text.getSearchTitle().toLowerCase();
+        Assert.assertEquals(textFound, textTransfered);
     }
 
 }
