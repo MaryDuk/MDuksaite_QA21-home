@@ -21,5 +21,14 @@ public HelperBase (WebDriver driver){
         return driver.findElements(locator).size() > 0;
     }
 
+    public void type(By locator, String text) throws InterruptedException {
+        if (text!=null){
+            Thread.sleep(3000);
+            driver.findElement(locator).click();
+            driver.findElement(locator).clear();
+            driver.findElement(locator).sendKeys(text);
+        }
+    }
+
 
 }
