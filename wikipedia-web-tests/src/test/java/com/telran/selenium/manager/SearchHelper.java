@@ -28,7 +28,7 @@ public class SearchHelper extends HelperBase{
         return isElementPresent(By.xpath("//b[contains(text(),'" + text + "')]"));
     }
 
-    public String getSearchText() {
+    public String getTextOnWeb() {
         new WebDriverWait(driver, 20).until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#firstHeading")));
         return driver.findElement(By.cssSelector("#firstHeading")).getText().toLowerCase();
     }
